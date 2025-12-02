@@ -10,6 +10,7 @@ class ClientMainGame:
         self.players = []
         self.user_data: dict = load_json('Client/client_info.json')
         self.Entry_box = Entry(125, 475, 300, 40)
+        self.function_multiplier = 450/30
 
     def update(self):
         self.win.update()
@@ -22,7 +23,7 @@ class ClientMainGame:
         if self.players:
             for player in self.players:
                 player.draw()
-                player.draw_function(test_function)
+                player.draw_function(test_function, int(self.function_multiplier))
 
         self.Entry_box.draw()
 

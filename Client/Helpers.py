@@ -23,8 +23,8 @@ def load_json(file_path):
     with open(file_path, 'r') as f:
         return json.load(f)
 
-def test_function(x):
-    return np.sin(x)
+def test_function(x, multiplier):
+    return multiplier*np.sin(x/multiplier)
 
 class Entry:
     def __init__(self, x, y, width, height):

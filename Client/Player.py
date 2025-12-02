@@ -11,9 +11,11 @@ class Player:
     def draw(self):
         self.player_box.draw()
 
-    def draw_function(self, func, max_points=1000):
-        x_values = np.linspace(0, max_points, max_points)+self.pos[0]
-        y_values = func(x_values)+self.pos[1]
+    def draw_function(self, func, multi, max_points=1000):
+        x_values = np.linspace(0, max_points, max_points)
+        y_values = func(x_values, multi)
+        x_values += self.pos[0]
+        y_values += self.pos[1]
         points = [(x, y) for x, y in zip(x_values, y_values)]
         for i in range(len(points)-1):
             pyola.shapes.Line(points[i], points[i+1], color=self.color).draw()

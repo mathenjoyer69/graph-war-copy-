@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8d6b0f2-88a1-4cf4-9d62-f58a1655f31f" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a8d6b0f2-88a1-4cf4-9d62-f58a1655f31f" name="Changes" comment="added some of the basic stuff from the game (text input and drawing functions)">
       <change beforePath="$PROJECT_DIR$/Client/Helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Helpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/client_main_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/client_main_game.py" afterDir="false" />
@@ -33,7 +32,7 @@
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/mathenjoyer69/graph-war-final-project-",
+    "url": "https://github.com/mathenjoyer69/graph-war-copy-.git",
     "accountId": "9e192ae5-5e29-4ca0-9645-327776da5b81"
   }
 }]]></component>
@@ -118,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764694621120</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added some of the basic stuff from the game (text input and drawing functions)">
+      <option name="closed" value="true" />
+      <created>1764714564928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764714564928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="added some of the basic stuff from the game (text input and drawing functions)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some of the basic stuff from the game (text input and drawing functions)" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
