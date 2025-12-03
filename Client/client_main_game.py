@@ -10,8 +10,9 @@ class ClientMainGame:
         self.players = []
         self.user_data: dict = load_json('Client/client_info.json')
         self.Entry_box = Entry(125, 475, 300, 40)
-        self.function_multiplier = 450/30
-
+        self.function_multiplier = 450//30
+        self.current_func = None
+        self.axis_x0 = self.win.width / 2
     def update(self):
         self.win.update()
 
@@ -23,7 +24,8 @@ class ClientMainGame:
         if self.players:
             for player in self.players:
                 player.draw()
-                player.draw_function(test_function, int(self.function_multiplier))
+                if self.current_func:
+                    player.draw_function(self.current_func, self.function_multiplier, self.axis_x0)
 
         self.Entry_box.draw()
 
@@ -39,6 +41,13 @@ class ClientMainGame:
 
             self.Entry_box.handle_event()
             self.Entry_box.handle_keyboard()
+
+            if pyola.input.is_key_pressed(glfw.KEY_ENTER):
+                try:
+                    self.current_func = string_to_function(self.Entry_box.text)
+                except ValueError as e:
+                    print(f"Error parsing function: {e}")
+
             self.draw()
             self.update()
             time.sleep(1 / 60)

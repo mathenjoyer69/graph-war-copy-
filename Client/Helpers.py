@@ -24,7 +24,7 @@ def load_json(file_path):
         return json.load(f)
 
 def test_function(x, multiplier):
-    return multiplier*np.sin(x/multiplier)
+    return multiplier*np.cos(x/multiplier)
 
 class Entry:
     def __init__(self, x, y, width, height):
@@ -83,3 +83,34 @@ class ChatRoom:
     def add_message(self, message):
         self.messages.append(message)
 
+
+ALLOWED_NAMES = {
+    "sin": np.sin,
+    "cos": np.cos,
+    "tan": np.tan,
+    "sqrt": np.sqrt,
+    "log": np.log,
+    "exp": np.exp,
+    "abs": np.abs,
+    "pi": np.pi,
+    "e": np.e
+}
+
+def string_to_function(func_string: str):
+    func_string = func_string.strip()
+    func_string = func_string.replace("^", "**")
+
+    try:
+        code = compile(func_string, "<user_func>", "eval")
+    except SyntaxError as e:
+        raise ValueError(f"not a valid function: {e}")
+
+    def func(x, multi):
+        env = dict(ALLOWED_NAMES)
+        env["x"] = x / multi
+
+        value = eval(code, {}, env)
+
+        return multi * value
+
+    return func
