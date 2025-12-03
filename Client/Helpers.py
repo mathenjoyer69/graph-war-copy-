@@ -2,6 +2,7 @@ import pyola
 import json
 import numpy as np
 import glfw
+from pyola import text
 
 class Button:
     def __init__(self, x, y, width, height, text_color=(0, 0, 0), variable=None, color=None, texture=None):
@@ -41,9 +42,11 @@ class Entry:
         self.last_keys = set()
 
     def draw(self):
+        label = text.Text(self.x, self.y+self.height//2, self.text, color=(0, 0, 0))
         color = self.active_color if self.active else self.base_color
         self.entry_rect.color = color
         self.entry_rect.draw()
+        label.draw()
 
     def handle_event(self):
         mx, my = pyola.input.get_mouse_position()
