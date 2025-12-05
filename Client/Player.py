@@ -2,7 +2,8 @@ import pyola
 import numpy as np
 import Client.Helpers
 
-settings = Client.Helpers.load_json("Client/settings.json")
+settings = Client.Helpers.load_json("settings.json")
+
 class Player:
     def __init__(self, name, color, pos=(0, 0)):
         self.name = name
@@ -47,4 +48,3 @@ class Player:
 
     def reset_player(self):
         pass
-
