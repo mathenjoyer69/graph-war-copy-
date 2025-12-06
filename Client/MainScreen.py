@@ -2,7 +2,7 @@ import time
 import pyola
 import Client.Helpers
 
-settings = Client.Helpers.load_json("settings.json")
+settings = Client.Helpers.load_json("C:\\Users\\ariel\\PycharmProjects\\graph-war\\Client\\settings.json")
 
 
 class MainScreen:

@@ -13,6 +13,7 @@ class ClientMainGame:
         self.function_multiplier = 450//30
         self.current_func = None
         self.axis_x0 = self.win.width / 2
+
     def update(self):
         self.win.update()
 
@@ -25,7 +26,7 @@ class ClientMainGame:
             for player in self.players:
                 player.draw()
                 if self.current_func:
-                    player.draw_function(self.current_func, self.function_multiplier, self.axis_x0)
+                    player.draw_function(self.current_func, self.function_multiplier, self.axis_x0, -1)
 
         self.Entry_box.draw()
 
